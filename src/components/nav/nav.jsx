@@ -76,18 +76,18 @@ class Nav extends Component {
       }).queue([
         {
           title: 'Key',
-          text: 'Informe a sua key do Braziliex',
+          text: 'Informe a sua key do Braziliex.',
         },
         {
           title: 'Sign',
-          text: 'Informe a sua Sign do Braziliex',
+          text: 'Informe a sua Sign do Braziliex.',
         },
       ]).then((result) => {
         if (result.value) {
           MySwal.fire({
             title: 'Tudo certo!',
-            text: 'Pronto para enviar',
-            confirmButtonText: 'Enviar',
+            text: 'Pronto para fazer login?',
+            confirmButtonText: 'Sim',
           }).then((res) => {
             if (res) {
               const prv = {
