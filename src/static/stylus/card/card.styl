@@ -1,0 +1,87 @@
+.row-flex-full
+  flex: 1
+
+.saldo
+  position: absolute
+  top: 4px
+  left: 1.40rem
+  color: #777
+  font-size: 0.850rem
+  height: 20px
+  overflow: hidden
+  width:100px
+  cursor:pointer
+  .quantidade
+    position: absolute
+    top: 30px
+    will-change: top
+    transition: top 0.5s ease-in-out
+
+  .reais
+    position: absolute
+    top: 0
+    will-change: top
+    transition: top 0.5s ease-in-out
+  &:hover
+    .reais
+      top: -40px
+    .quantidade
+      top: 0
+
+
+.card-body-home
+  max-width: 234px
+
+.card-image
+  max-width: 120px
+
+.card
+  border-radius: 3px !important
+  border: none !important
+  border-radius: 5px
+  background: #FFF
+
+  &.full
+    position:fixed
+    top:0
+    left:0
+    right:0
+    bottom:20px
+    width: 100%
+    height:100%
+    z-index:5000
+    .d-table
+      article
+        height:97% !important
+
+.card-subtitle
+  font-size: 0.875rem
+
+.info-top
+  font-size: 0.845rem
+  border-top: 1px solid #e6e6e6
+
+.card-text
+  font-size:0.875rem
+
+.volume
+  font-size:0.850rem
+  height: 20px
+
+.valor
+  font-size: 1.3rem
+  height: 30px
+
+.variacao
+  font-size:0.875rem
+  height: 20px
+
+.btn-outline-primary
+  border: 1px solid transparent
+  color: #4B4F56
+  background: #F6F7F9
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  &:hover
+    color: #ffffff
+    background: #3E95FF
+    border: 1px solid transparent

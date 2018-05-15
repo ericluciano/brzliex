@@ -1,0 +1,104 @@
+@font-face
+   font-family: 'SanFranciscoDisplay-Medium'
+   src: url("../../fonts/SanFranciscoDisplay-Medium.otf") format("opentype")
+
+setFont(name = 'SanFranciscoDisplay-Medium', size = 1.350rem)
+  font-family: name, sans-serif
+  font-size: size
+
+bg-blue = #3D94FF
+bg-red = #d6464f
+bg-purple = #6f42c1
+bg-purple-light = #c9c9c9
+
+.bg-blue
+  background: #3E95FF
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.176);
+
+.w-10
+  font-size:1.2rem;
+
+.color
+  &-blue
+    color: bg-blue
+  &-red
+    color: bg-red
+  &-green
+    color: green
+
+.label-buy
+  color:#3e95ff
+  font-size:1em
+
+.label-sell
+  color:#D6464F
+  font-size:1em
+
+.label-total
+  color:grey
+  font-weight:bold
+
+.label-spacing
+  padding-right:8px
+  margin-left:6px
+
+body
+  setFont()
+  text-rendering: optimizeLegibility
+  font-size: 16px
+  font-size: 1rem
+  overflow-x: hidden
+  padding-top:46px
+  background: #F0F1F5
+  color: #333
+
+.name-cripto
+  font-size:1.2rem
+  color: #444
+  cursor: pointer
+
+.ReactTable
+  .rt-td
+    text-align: center
+    font-style: normal
+    font-size:0.818rem
+
+  .rt-th
+    font-size: 1rem
+    font-weight: 300
+    text-align: center
+    outline: none
+
+.closeNavMenu
+  padding:16px 0px;box-sizing:border-box;font-weight:bold;border-bottom:1px solid #F6F7F9
+
+.message
+  display: block
+  font-size:1.4em
+
+.loading
+  display:flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  position:fixed
+  top:0px
+  right:0px
+  width:100%
+  height:100%
+  background-color:rgba(255,255,255,0.8)
+  z-index:100
+  &.inactive
+    display:none
+
+.frameInvesting
+  width:100%
+  width:100%
+  min-height:460px
+  max-height:800px
+  height:100%
+
+@import "nav/nav.styl"
+@import "card/card.styl"
+@import "coinView/coinView.styl"
+@import "animations/animations.styl"

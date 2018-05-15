@@ -1,0 +1,132 @@
+.home-link
+  color: #fff
+  font-size:1.46rem
+  will-change: scale
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  &:hover
+    color: #fff
+    will-change: scale
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+
+.actions-menu
+  border-bottom: 1px solid #e9e9e9
+  padding: 8px 0px 10px
+
+.nav-link
+  outline: none
+
+.nav-item
+  font-size: 1rem
+  img
+    margin-right: 1rem
+
+.navbar-toggler
+  &:focus,
+  &:active
+    outline: 0
+
+  span
+    display: block
+    background-color: #fff
+    height: 3px
+    width: 25px
+    margin-top: 4px
+    margin-bottom: 4px
+    transform: rotate(0deg)
+    position: relative
+    right: 0
+    opacity: 1
+    &:nth-child(1),
+    &:nth-child(3)
+      transition: transform .35s ease-in-out;
+
+  &:not(.collapsed) span:nth-child(1)
+    position: absolute
+    right: 18px
+    top: 26px
+    transform: rotate(135deg)
+    opacity: 0.9
+
+  &:not(.collapsed) span:nth-child(2)
+    height: 18px
+    visibility: hidden
+    background-color: transparent
+
+  &:not(.collapsed) span:nth-child(3)
+    position: absolute
+    right: 18px
+    top: 26px
+    transform: rotate(-135deg)
+    opacity: 0.9
+
+
+@media screen and (min-width: 0px)
+  .offcanvas-collapse
+    position: fixed
+    top: 0
+    bottom: 0
+    left: -60vw
+    width: 60vw
+    height: 100%
+    max-width: 380px
+    padding-right: 1rem
+    padding-left: 1rem
+    border-right: 1px solid #F6F7F9
+    overflow-y: auto
+    visibility: hidden
+    opacity: 0
+    background-color: #FBFBFB
+    will-change: opacity, left, visibility
+    transition-timing-function: ease-in-out
+    transition-duration: .25s, .2s, .2s
+    transition-property: opacity, left, visibility
+    &.open
+      left: 0
+      opacity: 1
+      visibility: visible
+
+  .overlay
+    position: fixed
+    top: 46px
+    left: 0
+    right: 0
+    bottom:0
+    width:100%
+    height:100%
+    background-color: rgba(0,0,0,.7);
+    opacity: 0
+    visibility: hidden
+    z-index: 997;
+    will-change: opacity;
+    transition-timing-function: ease-in-out
+    transition-duration: .1s
+    transition-property: opacity, visibility
+    &.open
+      opacity:1
+      visibility: visible
+
+  .str
+    position: relative
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    -webkit-transition: color 1000ms
+    transition: color 1000ms
+    outline: none
+    &:before
+      content: ""
+      position: absolute
+      z-index: -1
+      top: 0
+      left: -1rem
+      right: -1rem
+      bottom: 0
+      background: #F1F2F6
+      border-left:2px solid #3D94FF
+      transform: scaleX(0)
+      transform-origin: 0 50%
+      transition-property: transform
+      transition: 300ms ease-out
+    &:hover:before
+      transform: scaleX(1)

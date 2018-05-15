@@ -1,0 +1,53 @@
+.animateTop
+  position: relative
+  overflow: hidden
+  span
+    &:last-child
+      position: absolute
+      right:0
+      top: 30px
+      will-change: top
+      transition: top 0.5s ease-in-out
+    &:first-child
+      position: absolute
+      top: 0
+      right:0
+      will-change: top
+      transition: top 0.5s ease-in-out
+  &:hover
+    span
+      &:first-child
+        top: -40px
+      &:last-child
+        top: 0
+
+.spinner
+  width: 80px
+  height: 80px
+  background-color: #2B81F5
+  border-radius: 100%
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out
+  animation: sk-scaleout 1.0s infinite ease-in-out
+
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0)
+  }
+  100% {
+    -webkit-transform: scale(1.0)
+    opacity: 0
+  }
+}
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0)
+    transform: scale(0)
+  }
+
+  100% {
+    -webkit-transform: scale(1.0)
+    transform: scale(1.0)
+    opacity: 0
+  }
+}
